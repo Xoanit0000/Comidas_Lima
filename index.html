@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores de Lima · Siete platos de la cocina limeña</title>
+  <meta name="description" content="Blog de cocina limeña: siete platos emblemáticos de Lima —ceviche, pescados, causa, ají de gallina, lomo saltado, arroz chaufa y chicha morada— con su historia, sus ingredientes y cómo se comen hoy.">
+  <meta name="author" content="Juan María Pàmies García">
+  <meta name="theme-color" content="#234936">
+
+  <!-- Tarjetas para redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sabores de Lima · Siete platos de la cocina limeña">
+  <meta property="og:description" content="Del ceviche al arroz chaufa: siete platos para entender cómo come Lima.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/27/Ceviche_at_Peru.jpg">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Símbolo como icono de la pestaña -->
+  <link rel="icon" href="img/espiral.svg" type="image/svg+xml">
+
+  <!-- Tipografías: Sora para titulares, Nunito Sans para el texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+  <!-- CABECERA ------------------------------------------------------------ -->
+  <header class="cabecera">
+    <div class="contenido cabecera__interior">
+      <a class="marca" href="#inicio">
+        <img class="marca__simbolo" src="img/espiral.svg" alt="" width="44" height="24">
+        <span class="marca__nombre">Sabores de Lima</span>
+      </a>
+
+      <nav class="menu" aria-label="Entradas del blog">
+        <ul>
+          <li><a href="#ceviche">Ceviche</a></li>
+          <li><a href="#pescados">Pescados</a></li>
+          <li><a href="#causa">Causa</a></li>
+          <li><a href="#aji-de-gallina">Ají de gallina</a></li>
+          <li><a href="#lomo-saltado">Lomo saltado</a></li>
+          <li><a href="#arroz-chaufa">Chaufa</a></li>
+          <li><a href="#chicha-morada">Chicha</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- PORTADA ----------------------------------------------------------- -->
+    <section class="portada" id="inicio">
+      <img class="portada__espiral" src="img/espiral.svg" alt="" aria-hidden="true">
+      <div class="contenido portada__interior">
+        <p class="portada__etiqueta">Cocina de Lima · 7 entradas</p>
+        <h1 class="portada__titulo">Sabores<br>de Lima</h1>
+        <p class="portada__entrada">Siete platos para entender una ciudad que come mirando al mar y cocina con lo que trajo cada barco.</p>
+        <p class="portada__meta">HTML5 · CSS · JavaScript</p>
+        <a class="boton" href="#entradas">Ver las entradas</a>
+      </div>
+    </section>
+
+    <!-- ÍNDICE ------------------------------------------------------------ -->
+    <section class="indice" id="entradas" aria-labelledby="titulo-indice">
+      <div class="contenido">
+        <div class="seccion__cabecera">
+          <h2 id="titulo-indice">Las siete entradas</h2>
+          <p>Del mar al wok y de la olla al vaso. Cada entrada cuenta qué lleva el plato, de dónde viene y cómo se come en Lima.</p>
+        </div>
+
+        <div class="filtros" role="group" aria-label="Filtrar las entradas por etiqueta">
+          <button class="chip" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button class="chip" type="button" data-filtro="del-mar" aria-pressed="false">Del mar</button>
+          <button class="chip" type="button" data-filtro="criollo" aria-pressed="false">Criollo</button>
+          <button class="chip" type="button" data-filtro="chifa" aria-pressed="false">Chifa</button>
+          <button class="chip" type="button" data-filtro="bebidas" aria-pressed="false">Bebidas</button>
+        </div>
+        <p class="filtros__estado" id="estado-filtro" role="status" aria-live="polite"></p>
+
+        <ul class="tarjetas">
+          <li class="tarjeta" data-etiquetas="del-mar">
+            <a class="tarjeta__enlace" href="#ceviche">
+              <figure class="tarjeta__figura">
+                <!-- Foto: ProjectManhattan · CC0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Ceviche_at_Peru.jpg"
+                     alt="Plato de ceviche peruano con pescado, cebolla roja, camote y choclo"
+                     width="1024" height="768" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--mar">Del mar</span>
+                <h3>Ceviche</h3>
+                <p>Pescado crudo marinado en limón y ají limo, con camote y choclo. El plato que resume la costa.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="del-mar">
+            <a class="tarjeta__enlace" href="#pescados">
+              <figure class="tarjeta__figura">
+                <!-- Foto: MiguelAlanCS · CC BY-SA 4.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pescado_sudado_%28dorada%292.jpg/1280px-Pescado_sudado_%28dorada%292.jpg"
+                     alt="Pescado sudado con tomate y cebolla en un plato de barro"
+                     width="1200" height="1206" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--mar">Del mar</span>
+                <h3>Pescados</h3>
+                <p>Sudado, a lo macho y jalea: tres formas de servir el pescado del día en una cebichería.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="criollo">
+            <a class="tarjeta__enlace" href="#causa">
+              <figure class="tarjeta__figura">
+                <!-- Foto: spersper · CC BY 2.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Causa_Rellena.jpg/1280px-Causa_Rellena.jpg"
+                     alt="Porción de causa rellena con palta y huevo duro"
+                     width="1200" height="1800" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--criollo">Criollo</span>
+                <h3>Causa limeña</h3>
+                <p>Papa amarilla con ají amarillo y limón, rellena de pollo o atún, palta y huevo.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="criollo">
+            <a class="tarjeta__enlace" href="#aji-de-gallina">
+              <figure class="tarjeta__figura">
+                <!-- Foto: Feralbt · CC BY-SA 3.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Aj%C3%AD_de_gallina_-_Tradicional.jpg/1280px-Aj%C3%AD_de_gallina_-_Tradicional.jpg"
+                     alt="Plato de ají de gallina con arroz blanco, huevo y aceituna"
+                     width="1200" height="799" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--criollo">Criollo</span>
+                <h3>Ají de gallina</h3>
+                <p>Gallina deshilachada en crema de ají amarillo, con pan y leche. El criollo que se come con cuchara.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="criollo chifa">
+            <a class="tarjeta__enlace" href="#lomo-saltado">
+              <figure class="tarjeta__figura">
+                <!-- Foto: WikiHes · CC BY-SA 4.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Lomo-saltado-perudelights.jpg"
+                     alt="Lomo saltado con papas fritas y arroz servido en un plato"
+                     width="1200" height="776" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <p class="tarjeta__etiquetas">
+                  <span class="etiqueta etiqueta--criollo">Criollo</span>
+                  <span class="etiqueta etiqueta--chifa">Chifa</span>
+                </p>
+                <h3>Lomo saltado</h3>
+                <p>Carne al wok con cebolla y tomate, papas fritas y arroz: la fusión chifa que se volvió bandera.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="chifa">
+            <a class="tarjeta__enlace" href="#arroz-chaufa">
+              <figure class="tarjeta__figura">
+                <!-- Foto: Municipalidad de Miraflores · CC BY 2.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ceremonia_de_certificaci%C3%B3n_Restaurantes_Saludables_2018_%2867%29.jpg/1280px-Ceremonia_de_certificaci%C3%B3n_Restaurantes_Saludables_2018_%2867%29.jpg"
+                     alt="Plato de arroz chaufa con tortilla de huevo y cebolla china"
+                     width="1200" height="800" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--chifa">Chifa</span>
+                <h3>Arroz chaufa</h3>
+                <p>Arroz frito con huevo, cebolla china y sillao. El imprescindible de la cocina chifa.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="bebidas">
+            <a class="tarjeta__enlace" href="#chicha-morada">
+              <figure class="tarjeta__figura">
+                <!-- Foto: young shanahan · CC BY 2.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Chicha_Morada_2017.jpg/1280px-Chicha_Morada_2017.jpg"
+                     alt="Vaso de chicha morada con hielo y una rodaja de limón"
+                     width="1200" height="1422" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--bebidas">Bebidas</span>
+                <h3>Chicha morada</h3>
+                <p>Maíz morado, piña, canela y clavo. El refresco morado de las mesas de Lima.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ENTRADAS ---------------------------------------------------------- -->
+    <section class="entradas" aria-label="Entradas del blog">
+
+      <!-- 1 · CEVICHE ------------------------------------------------------ -->
+      <article class="entrada" id="ceviche">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 01</p>
+            <h2>Ceviche</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--mar">Del mar</span></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Ceviche_at_Peru.jpg"
+                 alt="Plato de ceviche peruano con pescado, cebolla roja, camote y choclo"
+                 width="1024" height="768" loading="lazy" decoding="async">
+            <figcaption>
+              Ceviche limeño con camote y choclo. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Ceviche_at_Peru.jpg" rel="noopener">ProjectManhattan</a>,
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" rel="noopener">CC0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Pescado crudo, limón, ají limo y cebolla roja: unos minutos de marinado y un plato que se come al instante.</p>
+
+            <p>El ceviche no se cocina, se corta y se aliña. El pescado —corvina, lenguado o mero— se mezcla con limón sutil, ají limo, cebolla roja y sal, y en cinco minutos está listo. Todo lo demás es acompañamiento.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Pescado blanco muy fresco</li>
+              <li>Limón sutil</li>
+              <li>Ají limo</li>
+              <li>Cebolla roja</li>
+              <li>Sal y culantro</li>
+              <li>Camote cocido</li>
+              <li>Choclo</li>
+              <li>Cancha serrana</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>Comer pescado crudo con ají es costumbre anterior a la llegada de los españoles; el limón, traído después, acabó de darle la forma actual. El nombre tiene varias explicaciones —del «cebo» con el que las pescaderas preparaban el pescado o del escabeche— y ninguna se ha impuesto.</p>
+            <p>En el Perú es plato bandera y patrimonio cultural de la nación, y en 2023 la Unesco lo reconoció como expresión de la cocina tradicional peruana y patrimonio cultural inmaterial de la humanidad. Cada 28 de junio se celebra su día nacional.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>Recién hecho. Se sirve con su jugo, la «leche de tigre», y con camote y choclo para equilibrar la acidez. En Lima es plato de cebichería a mediodía, y se acompaña de cancha serrana o de una chicha morada bien fría.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Cebiche" rel="noopener">Wikipedia: «Cebiche»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#entradas">↑ Índice</a>
+            <a class="paso__enlace" href="#pescados">Siguiente: Pescados →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 2 · PESCADOS ----------------------------------------------------- -->
+      <article class="entrada" id="pescados">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 02</p>
+            <h2>Pescados: sudado, a lo macho y jalea</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--mar">Del mar</span></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pescado_sudado_%28dorada%292.jpg/1280px-Pescado_sudado_%28dorada%292.jpg"
+                 alt="Pescado sudado con tomate y cebolla en un plato de barro"
+                 width="1200" height="1206" loading="lazy" decoding="async">
+            <figcaption>
+              Pescado sudado. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Pescado_sudado_(dorada)2.jpg" rel="noopener">MiguelAlanCS</a>,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener">CC BY-SA 4.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Tres maneras de servir el mismo mar: al vapor, con crema de ají o rebozado y frito.</p>
+
+            <p>La carta de una cebichería limeña es más larga de lo que parece. Además del ceviche, hay al menos tres clásicos que se piden tanto o más: el sudado, el pescado a lo macho y la jalea.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Pescado del día</li>
+              <li>Tomate y cebolla roja</li>
+              <li>Ají amarillo y ají limo</li>
+              <li>Chicha de jora o vino (en el sudado)</li>
+              <li>Mariscos (a lo macho y jalea)</li>
+              <li>Yuca y camote</li>
+              <li>Limón</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>El sudado es un guiso costero que se hace en su propio jugo, tapado, con tomate, cebolla y ají; tiene parientes en otros países andinos y en algunas versiones se riega con chicha de jora. A lo macho, el pescado se cubre con una crema de ají amarillo y mariscos. La jalea es la versión frita: trozos de pescado y mariscos rebozados, con yuca y salsa criolla.</p>
+            <p>Los tres conviven en la misma carta y comparten despensa, pero cuentan historias distintas: el sudado viene de la cocina casera de la costa, y la jalea y el a lo macho se afianzaron en las cebicherías del siglo XX.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>A mediodía, y mejor cerca del agua: en el Callao, en Chorrillos o en los huariques junto al mar. La jalea se comparte; el sudado se come con cuchara y con arroz blanco.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Sudado" rel="noopener">Wikipedia: «Sudado»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#ceviche">← Anterior: Ceviche</a>
+            <a class="paso__enlace" href="#causa">Siguiente: Causa limeña →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 3 · CAUSA -------------------------------------------------------- -->
+      <article class="entrada" id="causa">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 03</p>
+            <h2>Causa limeña</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--criollo">Criollo</span></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Causa_Rellena.jpg/1280px-Causa_Rellena.jpg"
+                 alt="Porción de causa rellena con palta y huevo duro"
+                 width="1200" height="1800" loading="lazy" decoding="async">
+            <figcaption>
+              Causa rellena. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Causa_Rellena.jpg" rel="noopener">spersper</a>,
+              <a href="https://creativecommons.org/licenses/by/2.0/deed.es" rel="noopener">CC BY 2.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Papa amarilla prensada con ají amarillo y limón, rellena de pollo o atún, palta y huevo.</p>
+
+            <p>La causa es el entrante frío de la cocina limeña: una masa de papa amarilla amasada con ají amarillo, limón y aceite, que se moldea en capas y se rellena. Se corta en porciones y se sirve sin calentar.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Papa amarilla</li>
+              <li>Ají amarillo</li>
+              <li>Limón y aceite</li>
+              <li>Pollo o atún</li>
+              <li>Palta</li>
+              <li>Huevo duro</li>
+              <li>Mayonesa</li>
+              <li>Aceituna</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>La base es precolombina: la papa y el ají ya se combinaban antes de la llegada de los españoles. El nombre admite varias lecturas —del quechua <em>kausay</em>, «sustento» o «vida», o de la «causa» de la independencia— y ninguna está probada. Lo que sí es seguro es que se convirtió en el entrante frío de la cocina criolla limeña.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>Fría, en porciones rectangulares o en bocados pequeños, como entrante o dentro de una mesa de entradas. Es habitual en fondas, loncheras y celebraciones, y admite rellenos muy distintos: pollo, atún, cangrejo o verduras.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Causa_a_la_lime%C3%B1a" rel="noopener">Wikipedia: «Causa a la limeña»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#pescados">← Anterior: Pescados</a>
+            <a class="paso__enlace" href="#aji-de-gallina">Siguiente: Ají de gallina →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 4 · AJÍ DE GALLINA ----------------------------------------------- -->
+      <article class="entrada" id="aji-de-gallina">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 04</p>
+            <h2>Ají de gallina</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--criollo">Criollo</span></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Aj%C3%AD_de_gallina_-_Tradicional.jpg/1280px-Aj%C3%AD_de_gallina_-_Tradicional.jpg"
+                 alt="Plato de ají de gallina con arroz blanco, huevo y aceituna"
+                 width="1200" height="799" loading="lazy" decoding="async">
+            <figcaption>
+              Ají de gallina tradicional. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Aj%C3%AD_de_gallina_-_Tradicional.jpg" rel="noopener">Feralbt</a>,
+              <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es" rel="noopener">CC BY-SA 3.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Una crema espesa de ají amarillo con pan y leche, y la gallina deshilachada dentro.</p>
+
+            <p>El ají de gallina es un plato de cuchara: la gallina cocida se deshilacha y se mezcla con una crema de ají amarillo espesada con pan remojado en leche y caldo. Se sirve sobre papa y con arroz al lado.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Gallina o pollo</li>
+              <li>Ají amarillo</li>
+              <li>Pan remojado en leche</li>
+              <li>Nueces</li>
+              <li>Queso fresco</li>
+              <li>Caldo de la cocción</li>
+              <li>Papa cocida</li>
+              <li>Arroz blanco, huevo y aceituna</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>Se suele explicar como una adaptación criolla de la gallina en pepitoria española: donde el original usaba almendras y especias, aquí manda el ají amarillo y el pan sirve para espesar. De ahí sale ese color amarillo intenso y el sabor que hoy se reconocen como plato de costa.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>Con arroz blanco, papa cocida, huevo duro y aceituna. Es plato de menú del día y de mesa de domingo, y se come con cuchara, mojando pan en la crema cuando queda.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Aj%C3%AD_de_gallina" rel="noopener">Wikipedia: «Ají de gallina»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#causa">← Anterior: Causa limeña</a>
+            <a class="paso__enlace" href="#lomo-saltado">Siguiente: Lomo saltado →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 5 · LOMO SALTADO ------------------------------------------------- -->
+      <article class="entrada" id="lomo-saltado">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 05</p>
+            <h2>Lomo saltado</h2>
+            <p class="entrada__etiquetas">
+              <span class="etiqueta etiqueta--criollo">Criollo</span>
+              <span class="etiqueta etiqueta--chifa">Chifa</span>
+            </p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Lomo-saltado-perudelights.jpg"
+                 alt="Lomo saltado con papas fritas y arroz servido en un plato"
+                 width="1200" height="776" loading="lazy" decoding="async">
+            <figcaption>
+              Lomo saltado con arroz y papas fritas. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Lomo-saltado-perudelights.jpg" rel="noopener">WikiHes</a>,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener">CC BY-SA 4.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">El wok chino se encontró con la sartén criolla: carne, cebolla, tomate y papas fritas en el mismo plato.</p>
+
+            <p>El lomo saltado se hace en dos minutos y a fuego muy alto: tiras de lomo de res que se saltean con cebolla roja, tomate y ají amarillo, y se terminan con sillao y un golpe de vinagre. Se sirve con papas fritas y arroz blanco, a la vez.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Lomo de res</li>
+              <li>Cebolla roja</li>
+              <li>Tomate</li>
+              <li>Ají amarillo</li>
+              <li>Sillao (salsa de soja)</li>
+              <li>Vinagre</li>
+              <li>Papas fritas</li>
+              <li>Arroz blanco y culantro</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>Nace en la cocina chifa, la que llevó a Lima la comunidad china llegada desde mediados del siglo XIX. La técnica es cantonesa —fuego alto y salteado rápido al wok— y los ingredientes son peruanos: ají amarillo, tomate, cebolla y papa. Hoy es uno de los platos más consumidos del país.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>Con arroz y papas fritas a la vez, que es la mezcla que más sorprende fuera del Perú. También «a lo pobre», con huevo frito y plátano, y en versión de pollo o de mariscos.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Lomo_saltado" rel="noopener">Wikipedia: «Lomo saltado»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Arroz_chaufa" rel="noopener">Wikipedia: «Arroz chaufa»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#aji-de-gallina">← Anterior: Ají de gallina</a>
+            <a class="paso__enlace" href="#arroz-chaufa">Siguiente: Arroz chaufa →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 6 · ARROZ CHAUFA -------------------------------------------------- -->
+      <article class="entrada" id="arroz-chaufa">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 06</p>
+            <h2>Arroz chaufa</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--chifa">Chifa</span></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ceremonia_de_certificaci%C3%B3n_Restaurantes_Saludables_2018_%2867%29.jpg/1280px-Ceremonia_de_certificaci%C3%B3n_Restaurantes_Saludables_2018_%2867%29.jpg"
+                 alt="Plato de arroz chaufa con tortilla de huevo y cebolla china"
+                 width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>
+              Arroz chaufa. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Ceremonia_de_certificaci%C3%B3n_Restaurantes_Saludables_2018_(67).jpg" rel="noopener">Municipalidad de Miraflores</a>,
+              <a href="https://creativecommons.org/licenses/by/2.0/deed.es" rel="noopener">CC BY 2.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Arroz del día anterior, huevo, cebolla china y sillao: el plato más representativo de la cocina chifa.</p>
+
+            <p>El chaufa se hace con arroz ya cocido y frío, que no se apelmaza al saltearlo. Al wok van huevo, cebolla china, jengibre, sillao y, si se quiere, pollo, chancho o mariscos. El resultado es un arroz suelto, brillante y salado.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Arroz cocido del día anterior</li>
+              <li>Huevo</li>
+              <li>Cebolla china</li>
+              <li>Sillao</li>
+              <li>Jengibre y ajo</li>
+              <li>Pollo, chancho o mariscos (opcional)</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>El nombre viene del cantonés <em>chao fan</em>, arroz frito. La cocina chifa —la de los restaurantes chino-peruanos y la comunidad tusán— lo convirtió en imprescindible de la carta limeña, hasta el punto de ser su plato más representativo.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>Con tallarín saltado, wantán frito y un poco de limón; se acompaña de salsa de ají y de té chino. Es también el plato que se pide para llevar cuando no hay tiempo para más.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Arroz_chaufa" rel="noopener">Wikipedia: «Arroz chaufa»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#lomo-saltado">← Anterior: Lomo saltado</a>
+            <a class="paso__enlace" href="#chicha-morada">Siguiente: Chicha morada →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 7 · CHICHA MORADA ------------------------------------------------ -->
+      <article class="entrada" id="chicha-morada">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 07</p>
+            <h2>Chicha morada</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--bebidas">Bebidas</span></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Chicha_Morada_2017.jpg/1280px-Chicha_Morada_2017.jpg"
+                 alt="Vaso de chicha morada con hielo y una rodaja de limón"
+                 width="1200" height="1422" loading="lazy" decoding="async">
+            <figcaption>
+              Chicha morada. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Chicha_Morada_2017.jpg" rel="noopener">young shanahan</a>,
+              <a href="https://creativecommons.org/licenses/by/2.0/deed.es" rel="noopener">CC BY 2.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Maíz morado hervido con piña, canela y clavo, endulzado y servido muy frío.</p>
+
+            <p>La chicha morada se hace cociendo maíz morado —<em>ckolli</em>— con cáscara de piña, membrillo, canela y clavo. El caldo se cuela, se endulza con azúcar o chancaca y se termina con limón. Se sirve con hielo.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Maíz morado</li>
+              <li>Cáscara de piña</li>
+              <li>Membrillo</li>
+              <li>Canela</li>
+              <li>Clavo de olor</li>
+              <li>Azúcar o chancaca</li>
+              <li>Limón</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>Es anterior al Imperio inca: hay indicios de su uso en ceremonias hace miles de años. No es una bebida fermentada —esa es la chicha de jora—, sino un refresco que se cuece y se enfría. Su preparación actual quedó recogida por escrito en el siglo XIX.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>En cualquier mesa limeña, y muy especialmente en octubre, el mes morado del Señor de los Milagros, cuando se acompaña de turrón y picarones. También es la bebida que se pide en una cebichería para acompañar el ceviche.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Chicha_morada" rel="noopener">Wikipedia: «Chicha morada»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#arroz-chaufa">← Anterior: Arroz chaufa</a>
+            <a class="paso__enlace" href="#entradas">↑ Volver al índice</a>
+          </nav>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- PIE ------------------------------------------------------------------ -->
+  <footer class="pie">
+    <div class="contenido">
+      <div class="pie__rejilla">
+        <div>
+          <div class="pie__marca">
+            <img src="img/espiral.svg" alt="" width="48" height="26">
+            <span>Sabores de Lima</span>
+          </div>
+          <p>Siete platos para entender la cocina de Lima: del mar al wok y de la olla al vaso.</p>
+          <p>Blog de la Actividad 1 de Desarrollo de aplicaciones en red · Grado en Ingeniería Informática.</p>
+        </div>
+
+        <div>
+          <h2>Entradas</h2>
+          <ul>
+            <li><a href="#ceviche">Ceviche</a></li>
+            <li><a href="#pescados">Pescados</a></li>
+            <li><a href="#causa">Causa limeña</a></li>
+            <li><a href="#aji-de-gallina">Ají de gallina</a></li>
+            <li><a href="#lomo-saltado">Lomo saltado</a></li>
+            <li><a href="#arroz-chaufa">Arroz chaufa</a></li>
+            <li><a href="#chicha-morada">Chicha morada</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Créditos</h2>
+          <p>Las fotografías proceden de Wikimedia Commons y se usan con la licencia indicada en cada pie.</p>
+          <p>Contenido y código: Juan María Pàmies García, <span id="anio">2026</span>.</p>
+          <p>El proceso de trabajo con herramientas de IA está documentado en el registro de uso de la IA que acompaña a la entrega.</p>
+        </div>
+      </div>
+
+      <div class="pie__creditos">
+        <span>HTML5 · CSS · JavaScript, sin frameworks.</span>
+        <span>Código bajo licencia Apache 2.0 · <a href="https://github.com/Xoanit0000/Comidas_Lima" rel="noopener">Repositorio en GitHub</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="arriba" id="arriba" type="button" hidden>↑ Arriba</button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

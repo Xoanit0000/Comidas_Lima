@@ -1,0 +1,818 @@
+/* ==========================================================================
+   Sabores de Lima · hoja de estilos
+   Actividad 1 · Desarrollo de aplicaciones en red
+   Orden: 1) tokens  2) base  3) cabecera  4) portada  5) índice
+          6) entradas  7) pie  8) utilidades  9) adaptación y preferencias
+   ========================================================================== */
+
+/* 1. TOKENS ---------------------------------------------------------------- */
+:root {
+  /* Paleta (solo la parte visual del sistema de marca) */
+  --verde-jade: #234936;
+  --verde-bosque: #123326;
+  --musgo: #647A45;
+  --salvia: #A8B49A;
+  --marfil: #F3EFE7;
+  --lima: #B8D66A;
+  --cian: #63C9C1;
+  --papaya: #FFB07C;
+  --papaya-oscuro: #A84E25;
+
+  /* Derivados de interfaz */
+  --papel: #FFFCF7;
+  --tinta: var(--verde-bosque);
+  --tinta-suave: #3E5749;
+  --linea: rgba(18, 51, 38, 0.14);
+  --sombra: 0 10px 28px rgba(18, 51, 38, 0.08);
+  --sombra-alta: 0 18px 44px rgba(18, 51, 38, 0.16);
+
+  /* Medidas */
+  --ancho: 74rem;
+  --lectura: 68ch;
+  --radio: 14px;
+  --radio-lg: 22px;
+  --alto-cabecera: 4.5rem;
+
+  /* Tipografía */
+  --fuente-titulo: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fuente-texto: "Nunito Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* 2. BASE ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--marfil);
+  color: var(--tinta);
+  font-family: var(--fuente-texto);
+  font-size: clamp(1rem, 0.35vw + 0.95rem, 1.125rem);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--verde-jade);
+  text-wrap: balance;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--papaya-oscuro);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--verde-jade);
+}
+
+:focus-visible {
+  outline: 3px solid var(--papaya-oscuro);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.contenido {
+  width: 100%;
+  max-width: var(--ancho);
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 4vw, 2.75rem);
+}
+
+.salto-contenido {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--verde-jade);
+  color: var(--marfil);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--radio) 0;
+}
+
+.salto-contenido:focus {
+  left: 0;
+}
+
+/* 3. CABECERA -------------------------------------------------------------- */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(243, 239, 231, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--linea);
+}
+
+.cabecera__interior {
+  min-height: var(--alto-cabecera);
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--verde-jade);
+  flex: 0 0 auto;
+}
+
+.marca__simbolo {
+  width: 2.6rem;
+  height: auto;
+}
+
+.marca__nombre {
+  font-family: var(--fuente-titulo);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.menu {
+  margin-left: auto;
+  min-width: 0;
+}
+
+.menu ul {
+  display: flex;
+  gap: 0.15rem;
+  align-items: center;
+  margin: 0;
+  padding: 0.25rem 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu ul::-webkit-scrollbar {
+  display: none;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--tinta-suave);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.menu a:hover {
+  background: rgba(35, 73, 54, 0.08);
+  color: var(--verde-jade);
+}
+
+.menu a[aria-current="true"] {
+  background: var(--verde-jade);
+  color: var(--marfil);
+}
+
+/* 4. PORTADA --------------------------------------------------------------- */
+.portada {
+  position: relative;
+  overflow: clip;
+  background:
+    radial-gradient(120% 90% at 85% 0%, rgba(184, 214, 106, 0.35), transparent 60%),
+    linear-gradient(170deg, var(--salvia) 0%, #C9CFB8 42%, var(--marfil) 100%);
+  border-bottom: 1px solid var(--linea);
+}
+
+.portada__espiral {
+  position: absolute;
+  right: -6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(46rem, 78vw);
+  opacity: 0.16;
+  pointer-events: none;
+  user-select: none;
+}
+
+.portada__interior {
+  position: relative;
+  padding-block: clamp(3.5rem, 11vw, 7.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.portada__etiqueta {
+  margin: 0;
+  font-family: var(--fuente-titulo);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--verde-jade);
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--papaya);
+}
+
+.portada__titulo {
+  font-size: clamp(2.9rem, 9vw, 6.5rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  color: var(--verde-bosque);
+  margin: 0.1em 0 0;
+}
+
+.portada__entrada {
+  max-width: 34ch;
+  margin: 0.4rem 0 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.45;
+  color: var(--tinta-suave);
+}
+
+.portada__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--musgo);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  background: var(--verde-jade);
+  color: var(--marfil);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: var(--sombra);
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.boton:hover {
+  background: var(--verde-bosque);
+  color: var(--marfil);
+  transform: translateY(-1px);
+}
+
+/* 5. ÍNDICE ---------------------------------------------------------------- */
+.indice {
+  padding-block: clamp(2.75rem, 7vw, 5rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.seccion__cabecera {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.seccion__cabecera h2 {
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+}
+
+.seccion__cabecera p {
+  max-width: 52ch;
+  margin: 0;
+  color: var(--tinta-suave);
+}
+
+.filtros {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.js .filtros {
+  display: flex;
+}
+
+.chip {
+  font-family: var(--fuente-texto);
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 51, 38, 0.22);
+  background: transparent;
+  color: var(--tinta-suave);
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.chip:hover {
+  border-color: var(--verde-jade);
+  color: var(--verde-jade);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--verde-jade);
+  border-color: var(--verde-jade);
+  color: var(--marfil);
+}
+
+.filtros__estado {
+  min-height: 1.4rem;
+  margin: 0.4rem 0 1.4rem;
+  font-size: 0.86rem;
+  color: var(--musgo);
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr));
+  gap: clamp(1rem, 2vw, 1.6rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tarjeta {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-alta);
+  border-color: rgba(35, 73, 54, 0.28);
+}
+
+.tarjeta[hidden] {
+  display: none;
+}
+
+.tarjeta__enlace {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tarjeta__figura {
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, var(--salvia), var(--musgo));
+  overflow: hidden;
+}
+
+.tarjeta__figura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.tarjeta:hover .tarjeta__figura img {
+  transform: scale(1.04);
+}
+
+.tarjeta__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 1.15rem 1.2rem 1.35rem;
+}
+
+.tarjeta h3 {
+  font-size: 1.22rem;
+}
+
+.tarjeta p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--tinta-suave);
+}
+
+.tarjeta__cta {
+  margin-top: auto;
+  padding-top: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--papaya-oscuro);
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--verde-bosque);
+  background: rgba(168, 180, 154, 0.4);
+}
+
+.etiqueta--mar {
+  background: rgba(99, 201, 193, 0.28);
+}
+
+.etiqueta--criollo {
+  background: rgba(255, 176, 124, 0.45);
+}
+
+.etiqueta--chifa {
+  background: rgba(184, 214, 106, 0.45);
+}
+
+.etiqueta--bebidas {
+  background: rgba(168, 180, 154, 0.45);
+}
+
+/* 6. ENTRADAS -------------------------------------------------------------- */
+.entradas {
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.entrada {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  border-top: 1px solid var(--linea);
+  scroll-margin-top: calc(var(--alto-cabecera) + 1rem);
+}
+
+.entrada__cabecera {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.entrada__numero {
+  margin: 0;
+  font-family: var(--fuente-titulo);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--musgo);
+}
+
+.entrada h2 {
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+}
+
+.entrada__etiquetas {
+  margin: 0;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.foto {
+  margin: 0 0 1.75rem;
+  border-radius: var(--radio-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--salvia), var(--musgo));
+  box-shadow: var(--sombra);
+}
+
+.foto img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.foto figcaption {
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--tinta-suave);
+  background: var(--papel);
+  border-top: 1px solid var(--linea);
+}
+
+.entrada__texto {
+  max-width: var(--lectura);
+}
+
+.entrada__texto h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--verde-jade);
+}
+
+.entrada__texto h3::after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 3px;
+  margin-top: 0.45rem;
+  background: var(--papaya);
+  border-radius: 2px;
+}
+
+.destacado {
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.45;
+  color: var(--verde-jade);
+  font-weight: 600;
+}
+
+.lista-ingredientes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0.3rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-ingredientes li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.97rem;
+}
+
+.lista-ingredientes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--musgo);
+}
+
+.fuentes {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--linea);
+}
+
+.fuentes ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--tinta-suave);
+}
+
+.paso {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-top: 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linea);
+}
+
+.paso__enlace {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--papaya-oscuro);
+}
+
+.paso__enlace:hover {
+  text-decoration: underline;
+}
+
+/* 7. PIE ------------------------------------------------------------------- */
+.pie {
+  background: var(--verde-bosque);
+  color: rgba(243, 239, 231, 0.82);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+
+.pie a {
+  color: var(--papaya);
+}
+
+.pie a:hover {
+  color: var(--lima);
+}
+
+.pie__rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.pie__marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.pie__marca img {
+  width: 3rem;
+  filter: brightness(0) invert(1) opacity(0.9);
+}
+
+.pie__marca span {
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--marfil);
+}
+
+.pie h2 {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--salvia);
+  margin-bottom: 0.75rem;
+}
+
+.pie p,
+.pie li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.pie ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pie__creditos {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(243, 239, 231, 0.18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: rgba(243, 239, 231, 0.62);
+}
+
+/* 8. UTILIDADES ------------------------------------------------------------ */
+.arriba {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 40;
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--verde-jade);
+  color: var(--marfil);
+  font-family: var(--fuente-texto);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--sombra-alta);
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.arriba:hover {
+  background: var(--verde-bosque);
+  transform: translateY(-2px);
+}
+
+.arriba[hidden] {
+  display: none;
+}
+
+/* 9. ADAPTACIÓN Y PREFERENCIAS -------------------------------------------- */
+@media (max-width: 46rem) {
+  :root {
+    --alto-cabecera: 4rem;
+  }
+
+  .cabecera__interior {
+    gap: 0.75rem;
+  }
+
+  .marca__simbolo {
+    width: 2.1rem;
+  }
+
+  .marca__nombre {
+    font-size: 0.92rem;
+  }
+
+  .menu ul {
+    padding-block: 0.15rem;
+  }
+
+  .menu a {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .portada__espiral {
+    right: -10rem;
+    width: 34rem;
+    opacity: 0.12;
+  }
+
+  .foto img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .cabecera,
+  .filtros,
+  .arriba,
+  .portada__espiral,
+  .paso {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .portada {
+    background: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .entrada {
+    break-inside: avoid;
+    border-top: 1px solid #999;
+  }
+
+  .foto {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .fuentes::after {
+    content: "Enlaces disponibles en la versión web.";
+    display: block;
+    font-size: 9pt;
+    color: #444;
+  }
+}

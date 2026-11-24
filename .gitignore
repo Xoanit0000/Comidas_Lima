@@ -1,0 +1,20 @@
+# Sistema y basura de escritorio
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Contexto del proyecto que no se publica
+_contexto/
+
+# Material de clase (no forma parte de la entrega)
+*.mp4
+*.vtt
+
+# Restos de Dropbox al sincronizar
+*.dropbox
+*conflicted copy*
