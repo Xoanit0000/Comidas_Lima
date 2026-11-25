@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabores de Lima · Siete platos de la cocina limeña</title>
-  <meta name="description" content="Blog de cocina limeña: siete platos emblemáticos de Lima —ceviche, pescados, causa, ají de gallina, lomo saltado, arroz chaufa y chicha morada— con su historia, sus ingredientes y cómo se comen hoy.">
+  <title>Sabores de Lima · Nueve platos de la cocina limeña</title>
+  <meta name="description" content="Blog de cocina limeña: nueve platos emblemáticos de Lima —ceviche, pescados, causa, ají de gallina, lomo saltado, arroz chaufa, chicha morada, suspiro a la limeña y mazamorra morada— con su historia, sus ingredientes y cómo se comen hoy.">
   <meta name="author" content="Juan María Pàmies García">
   <meta name="theme-color" content="#234936">
 
   <!-- Tarjetas para redes sociales -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sabores de Lima · Siete platos de la cocina limeña">
-  <meta property="og:description" content="Del ceviche al arroz chaufa: siete platos para entender cómo come Lima.">
+  <meta property="og:title" content="Sabores de Lima · Nueve platos de la cocina limeña">
+  <meta property="og:description" content="Del ceviche al suspiro a la limeña: nueve platos para entender cómo come Lima.">
   <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/27/Ceviche_at_Peru.jpg">
   <meta property="og:locale" content="es_ES">
 
@@ -47,6 +47,8 @@
           <li><a href="#lomo-saltado">Lomo saltado</a></li>
           <li><a href="#arroz-chaufa">Chaufa</a></li>
           <li><a href="#chicha-morada">Chicha</a></li>
+          <li><a href="#suspiro">Suspiro</a></li>
+          <li><a href="#mazamorra">Mazamorra</a></li>
         </ul>
       </nav>
     </div>
@@ -58,9 +60,9 @@
     <section class="portada" id="inicio">
       <img class="portada__espiral" src="img/espiral.svg" alt="" aria-hidden="true">
       <div class="contenido portada__interior">
-        <p class="portada__etiqueta">Cocina de Lima · 7 entradas</p>
+        <p class="portada__etiqueta">Cocina de Lima · 9 entradas</p>
         <h1 class="portada__titulo">Sabores<br>de Lima</h1>
-        <p class="portada__entrada">Siete platos para entender una ciudad que come mirando al mar y cocina con lo que trajo cada barco.</p>
+        <p class="portada__entrada">Nueve platos para entender una ciudad que come mirando al mar y cocina con lo que trajo cada barco.</p>
         <p class="portada__meta">HTML5 · CSS · JavaScript</p>
         <a class="boton" href="#entradas">Ver las entradas</a>
       </div>
@@ -70,8 +72,8 @@
     <section class="indice" id="entradas" aria-labelledby="titulo-indice">
       <div class="contenido">
         <div class="seccion__cabecera">
-          <h2 id="titulo-indice">Las siete entradas</h2>
-          <p>Del mar al wok y de la olla al vaso. Cada entrada cuenta qué lleva el plato, de dónde viene y cómo se come en Lima.</p>
+          <h2 id="titulo-indice">Las nueve entradas</h2>
+          <p>Del mar al wok, del almíbar al postre. Cada entrada cuenta qué lleva el plato, de dónde viene y cómo se come en Lima.</p>
         </div>
 
         <div class="filtros" role="group" aria-label="Filtrar las entradas por etiqueta">
@@ -80,6 +82,7 @@
           <button class="chip" type="button" data-filtro="criollo" aria-pressed="false">Criollo</button>
           <button class="chip" type="button" data-filtro="chifa" aria-pressed="false">Chifa</button>
           <button class="chip" type="button" data-filtro="bebidas" aria-pressed="false">Bebidas</button>
+          <button class="chip" type="button" data-filtro="postres" aria-pressed="false">Postres</button>
         </div>
         <p class="filtros__estado" id="estado-filtro" role="status" aria-live="polite"></p>
 
@@ -201,6 +204,41 @@
                 <span class="etiqueta etiqueta--bebidas">Bebidas</span>
                 <h3>Chicha morada</h3>
                 <p>Maíz morado, piña, canela y clavo. El refresco morado de las mesas de Lima.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+          <li class="tarjeta" data-etiquetas="postres">
+            <a class="tarjeta__enlace" href="#suspiro">
+              <figure class="tarjeta__figura">
+                <!-- Foto: Luisfranciscopm · CC BY-SA 4.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Suspiro_lime%C3%B1o.jpg/1280px-Suspiro_lime%C3%B1o.jpg"
+                     alt="Copa de suspiro a la limeña con merengue al oporto y canela"
+                     width="1200" height="1824" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--postres">Postres</span>
+                <h3>Suspiro a la limeña</h3>
+                <p class="dulzor"><span>Dulzor</span> <strong>Muy alto</strong></p>
+                <p>Manjar blanco con yemas y merengue al oporto. El bocado más dulce de la carta.</p>
+                <span class="tarjeta__cta">Leer la entrada →</span>
+              </div>
+            </a>
+          </li>
+
+          <li class="tarjeta" data-etiquetas="postres">
+            <a class="tarjeta__enlace" href="#mazamorra">
+              <figure class="tarjeta__figura">
+                <!-- Foto: MiguelAlanCS · CC BY-SA 4.0 · Wikimedia Commons -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mazamorramoradaconcanela.jpg/1280px-Mazamorramoradaconcanela.jpg"
+                     alt="Plato de mazamorra morada con canela molida por encima"
+                     width="1200" height="1162" loading="lazy" decoding="async">
+              </figure>
+              <div class="tarjeta__cuerpo">
+                <span class="etiqueta etiqueta--postres">Postres</span>
+                <h3>Mazamorra morada</h3>
+                <p class="dulzor"><span>Dulzor</span> <strong>Medio</strong></p>
+                <p>Maíz morado, frutas secas y especias, espesado con fécula. El postre morado de octubre.</p>
                 <span class="tarjeta__cta">Leer la entrada →</span>
               </div>
             </a>
@@ -621,6 +659,125 @@
 
           <nav class="paso" aria-label="Navegación entre entradas">
             <a class="paso__enlace" href="#arroz-chaufa">← Anterior: Arroz chaufa</a>
+            <a class="paso__enlace" href="#suspiro">Siguiente: Suspiro a la limeña →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 8 · SUSPIRO A LA LIMEÑA ------------------------------------------ -->
+      <article class="entrada" id="suspiro">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 08</p>
+            <h2>Suspiro a la limeña</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--postres">Postres</span></p>
+            <p class="dulzor"><span>Dulzor</span> <strong>Muy alto</strong></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Suspiro_lime%C3%B1o.jpg/1280px-Suspiro_lime%C3%B1o.jpg"
+                 alt="Copa de suspiro a la limeña con merengue al oporto y canela"
+                 width="1200" height="1824" loading="lazy" decoding="async">
+            <figcaption>
+              Suspiro a la limeña. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Suspiro_lime%C3%B1o.jpg" rel="noopener">Luisfranciscopm</a>,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener">CC BY-SA 4.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Manjar blanco con yemas coronado de merengue al oporto y un polvo de canela: dos capas y una cucharilla.</p>
+
+            <p>El suspiro se sirve en copa y se come despacio. Abajo va un manjar blanco espeso, de leche, azúcar y yemas; encima, un merengue batido con vino oporto y espolvoreado de canela. La gracia está en el contraste: lo denso de la base y el aire del merengue.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Leche</li>
+              <li>Azúcar</li>
+              <li>Yemas de huevo</li>
+              <li>Vainilla</li>
+              <li>Claras de huevo</li>
+              <li>Vino oporto</li>
+              <li>Canela molida</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>La tradición lo atribuye a Amparo Ayarza, cocinera limeña y esposa del poeta José Gálvez Barrenechea, que al probarlo dijo que era «suave y dulce como el suspiro de una mujer». De ahí el nombre. Sus dos partes —el manjar blanco y el merengue— llegaron al Perú con la cocina española, y el oporto es el detalle que lo separa de otros dulces de yema.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>En copa pequeña o en un molde individual, bien frío, con cucharilla de café. Cierra muchas cartas criollas y se asocia a las dulcerías de barrio y a las mesas de celebración: es el postre que se pide cuando parece que ya no queda sitio, y siempre queda.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Suspiro_de_lime%C3%B1a" rel="noopener">Wikipedia: «Suspiro de limeña»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#chicha-morada">← Anterior: Chicha morada</a>
+            <a class="paso__enlace" href="#mazamorra">Siguiente: Mazamorra morada →</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- 9 · MAZAMORRA MORADA ---------------------------------------------- -->
+      <article class="entrada" id="mazamorra">
+        <div class="contenido">
+          <header class="entrada__cabecera">
+            <p class="entrada__numero">Entrada 09</p>
+            <h2>Mazamorra morada</h2>
+            <p class="entrada__etiquetas"><span class="etiqueta etiqueta--postres">Postres</span></p>
+            <p class="dulzor"><span>Dulzor</span> <strong>Medio</strong></p>
+          </header>
+
+          <figure class="foto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Mazamorramoradaconcanela.jpg/1280px-Mazamorramoradaconcanela.jpg"
+                 alt="Plato de mazamorra morada con canela molida por encima"
+                 width="1200" height="1162" loading="lazy" decoding="async">
+            <figcaption>
+              Mazamorra morada con canela. Foto:
+              <a href="https://commons.wikimedia.org/wiki/File:Mazamorramoradaconcanela.jpg" rel="noopener">MiguelAlanCS</a>,
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="noopener">CC BY-SA 4.0</a>, vía Wikimedia Commons.
+            </figcaption>
+          </figure>
+
+          <div class="entrada__texto">
+            <p class="destacado">Maíz morado, frutas secas y especias, espesado hasta parecer una crema: el postre morado de octubre.</p>
+
+            <p>La mazamorra se hace cociendo maíz morado con cáscara de piña, membrillo, canela y clavo. El caldo se cuela, se le añaden guindones, orejones y huesillos, y se espesa con fécula o harina de camote hasta que toma cuerpo. Se sirve con canela molida por encima.</p>
+
+            <h3>Ingredientes clave</h3>
+            <ul class="lista-ingredientes">
+              <li>Maíz morado</li>
+              <li>Cáscara de piña</li>
+              <li>Membrillo y manzana</li>
+              <li>Canela y clavo de olor</li>
+              <li>Guindones, orejones y huesillos</li>
+              <li>Azúcar o chancaca</li>
+              <li>Fécula de maíz o harina de camote</li>
+              <li>Canela molida para servir</li>
+            </ul>
+
+            <h3>Origen e historia</h3>
+            <p>Viene del api morado, una bebida de maíz que se tomaba en los Andes desde hace siglos; con las frutas y las especias que llegaron de Europa acabó convertida en el postre que hoy conocemos. En Lima se vende en la calle y en las dulcerías, sobre todo en octubre, el mes del Señor de los Milagros.</p>
+
+            <h3>Cómo se come en Lima</h3>
+            <p>Tibia o fría, en plato hondo. El «combinado» —mitad mazamorra, mitad arroz con leche— es la forma más limeña de pedirla, y se llama «bandera peruana» cuando el arroz con leche va entre dos capas de mazamorra.</p>
+
+            <footer class="fuentes">
+              <h3>Fuentes</h3>
+              <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Mazamorra_morada" rel="noopener">Wikipedia: «Mazamorra morada»</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_del_Per%C3%BA" rel="noopener">Wikipedia: «Gastronomía del Perú»</a></li>
+              </ul>
+            </footer>
+          </div>
+
+          <nav class="paso" aria-label="Navegación entre entradas">
+            <a class="paso__enlace" href="#suspiro">← Anterior: Suspiro a la limeña</a>
             <a class="paso__enlace" href="#entradas">↑ Volver al índice</a>
           </nav>
         </div>
@@ -638,7 +795,7 @@
             <img src="img/espiral.svg" alt="" width="48" height="26">
             <span>Sabores de Lima</span>
           </div>
-          <p>Siete platos para entender la cocina de Lima: del mar al wok y de la olla al vaso.</p>
+          <p>Nueve platos para entender la cocina de Lima: del mar al wok, del almíbar al postre.</p>
           <p>Blog de la Actividad 1 de Desarrollo de aplicaciones en red · Grado en Ingeniería Informática.</p>
         </div>
 
@@ -652,6 +809,8 @@
             <li><a href="#lomo-saltado">Lomo saltado</a></li>
             <li><a href="#arroz-chaufa">Arroz chaufa</a></li>
             <li><a href="#chicha-morada">Chicha morada</a></li>
+            <li><a href="#suspiro">Suspiro a la limeña</a></li>
+            <li><a href="#mazamorra">Mazamorra morada</a></li>
           </ul>
         </div>
 

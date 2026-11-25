@@ -467,6 +467,34 @@ a:hover {
   background: rgba(168, 180, 154, 0.45);
 }
 
+.etiqueta--postres {
+  background: var(--papaya-oscuro);
+  color: var(--marfil);
+}
+
+/* Nivel de dulzor: solo en las entradas de postres */
+.dulzor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.dulzor span {
+  font-family: var(--fuente-titulo);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--musgo);
+}
+
+.dulzor strong {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--papaya-oscuro);
+}
+
 /* 6. ENTRADAS -------------------------------------------------------------- */
 .entradas {
   padding-bottom: clamp(2rem, 5vw, 4rem);

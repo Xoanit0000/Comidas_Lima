@@ -1,18 +1,18 @@
 # Sabores de Lima
 
 Blog de la **Actividad 1** (Laboratorio: creación de un blog) de *Desarrollo de aplicaciones en red*.
-Siete entradas sobre platos emblemáticos de la cocina limeña, hechas con HTML5, CSS y JavaScript
+Nueve entradas sobre platos emblemáticos de la cocina limeña, hechas con HTML5, CSS y JavaScript
 sin frameworks y publicadas con GitHub Pages.
 
 - **Web:** https://xoanit0000.github.io/Comidas_Lima/
 - **Repositorio:** https://github.com/Xoanit0000/Comidas_Lima
-- **Contenido:** 7 entradas con texto, imagen, ingredientes, historia, fuentes y créditos.
+- **Contenido:** 9 entradas con texto, imagen, ingredientes, historia, fuentes y créditos.
 
 ## Estructura
 
 ```
 Comidas_Lima/
-├── index.html      documento único: portada, índice, 7 entradas y pie
+├── index.html      documento único: portada, índice, 9 entradas y pie
 ├── styles.css      diseño: paleta, tipografía, rejillas y adaptación al móvil
 ├── script.js       mejoras opcionales: filtro, entrada activa, botón «Arriba»
 ├── img/
@@ -42,7 +42,7 @@ GitHub Pages publica desde la rama `main`, carpeta raíz. Cada `push` lanza un d
 
 ```bash
 git add .
-git commit -m "Blog completo: portada, índice, 7 entradas y estilos"
+git commit -m "Blog completo: portada, índice, 9 entradas y estilos"
 git push origin main
 ```
 
@@ -88,6 +88,8 @@ autor, licencia y enlace al original, como exige la atribución.
 | Lomo saltado | `Lomo-saltado-perudelights.jpg` | WikiHes | CC BY-SA 4.0 |
 | Arroz chaufa | `Ceremonia de certificación Restaurantes Saludables 2018 (67).jpg` | Municipalidad de Miraflores | CC BY 2.0 |
 | Chicha morada | `Chicha Morada 2017.jpg` | young shanahan | CC BY 2.0 |
+| Suspiro a la limeña | `Suspiro limeño.jpg` | Luisfranciscopm | CC BY-SA 4.0 |
+| Mazamorra morada | `Mazamorramoradaconcanela.jpg` | MiguelAlanCS | CC BY-SA 4.0 |
 
 ### Servir las fotos en local (opcional)
 
@@ -96,7 +98,8 @@ Si prefieres que la web no dependa de Commons:
 1. Descarga cada imagen desde su página de Commons.
 2. Guárdala en `img/` con el nombre que aparece en el comentario que hay justo encima de cada
    `<img>` (`img/ceviche.jpg`, `img/pescados.jpg`, `img/causa.jpg`, `img/aji-de-gallina.jpg`,
-   `img/lomo-saltado.jpg`, `img/arroz-chaufa.jpg`, `img/chicha-morada.jpg`).
+   `img/lomo-saltado.jpg`, `img/arroz-chaufa.jpg`, `img/chicha-morada.jpg`,
+   `img/suspiro.jpg`, `img/mazamorra-morada.jpg`).
 3. Cambia el `src` de esa imagen por la ruta local.
 
 Reduce cada foto a unos 1200 px de ancho y menos de 300 KB antes de subirla.
